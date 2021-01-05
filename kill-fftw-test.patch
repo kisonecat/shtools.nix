@@ -1,0 +1,15 @@
+diff --git a/setup.py b/setup.py
+index 5962153d..1960642a 100644
+--- a/setup.py
++++ b/setup.py
+@@ -244,10 +244,6 @@ def configuration(parent_package='', top_path=None):
+     kwargs['include_dirs'].extend([libdir])
+     kwargs['library_dirs'].extend([libdir])
+ 
+-    # FFTW info
+-    fftw_info = get_info('fftw', notfound_action=2)
+-    dict_append(kwargs, **fftw_info)
+-
+     if sys.platform != 'win32':
+         kwargs['libraries'].extend(['m'])
+ 
